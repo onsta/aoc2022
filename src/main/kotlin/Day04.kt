@@ -33,10 +33,9 @@ fun main() {
                     )
                 )
             }
-            .map {
-                if(it.first.containedInOther(it.second)) 1 else 0
+            .count {
+                it.first.containedInOther(it.second)
             }
-            .sum()
     }
 
     fun part2(input: List<String>): Int {
@@ -54,10 +53,9 @@ fun main() {
                     )
                 )
             }
-            .map {
-                if(it.first.overlaps(it.second)) 1 else 0
+            .count {
+                it.first.overlaps(it.second)
             }
-            .sum()
     }
 
     val input = readInput("Day04")
